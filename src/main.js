@@ -51,6 +51,7 @@ async function loadHomepage() {
     displayResults(data)
     console.log(data)
 }
+loadHomepage()
 
 // Detect page reload and display word results
 if (window.performance.navigation.type === 1) {
