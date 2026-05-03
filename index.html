@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordly</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <nav>
+    <h1 id="wordlyLogo">Wordly</h1>
+    <button class="toggle-theme" id="toggleTheme">
+      <svg>
+        <use href="assets/icons/dark.svg"></use>
+      </svg></button>
+  </nav>
+
+
+  <div class="app-box">
+
+    <!--content area-->
+    <main class="main-content">
+
+      <!--search bar-->
+      <form id="searchForm" class="search-form">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search for an english word..."
+          autocomplete="off"
+          >
+        <button type="submit" class="search-button">Search</button>
+      </form>
+
+
+      <!--search results-->
+      <div class="search-results-box" id="searchResultsBox">
+
+        <div class="word-box">
+          <div class="word">
+            <h2 id = "searchedWord"></h2>
+
+            <div id ="phoneticsBox" class="phonetics">
+
+              <!--phonetics text and audio will load here--> 
+
+            </div>
+
+          </div>
+
+          <button class="save-word" id="saveWord">🔖Save Word</button>
+        </div>
+
+        <div id="definitionsBox" class="definitions-box">
+          <h3>Definitions</h3>
+          <div class="definitions-list-box" id="definitionsList">
+
+            <!--part of speech definations will load here-->    
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <aside class="sidebar">
+      <h2>My Words</h2>
+      <ul id="myWordsBox" class="my-words-box">
+        <li class="my-word">
+          <span>hello</span>
+          <button class="delete-word-btn" title="Delete Word">X</button>
+        </li>
+      </ul>
+    </aside>
+  </div>
+  <script src="src/main.js"></script>
+</body>
+</html>
