@@ -137,7 +137,7 @@ function displayPhonetics(phonetics){
             <button class="audio-button" id="audioButton" onclick="playAudio('audioElement${i}')">
               
               <svg>
-                <use href="/assets/icons/audio.svg"></use>
+                <use href="assets/icons/audio.svg"></use>
               </svg>
 
               <audio id="audioElement${i}" src="${item.audio}">
@@ -282,18 +282,19 @@ myWordsBox.addEventListener("click", (event) => {
 toggleTheme.addEventListener("click", () => {
 
     const htmlElement = document.documentElement
-    let theme = htmlElement.getAttribute("data-theme")
+    const theme = htmlElement.getAttribute("data-theme")
 
-    if (theme === "dark") {
+    if (theme === "light") {
 
-    htmlElement.setAttribute("data-theme", "light")
-    toggleTheme.innerHTML = '<svg><use href="/assets/icons/light.svg"></use></svg>'
-
-  } else {
     htmlElement.setAttribute("data-theme", "dark")
     htmlElement["data-theme"] = "dark"
 
-    toggleTheme.innerHTML = '<svg><use href="/assets/icons/dark.svg"></use></svg>'
+    toggleTheme.innerHTML = '<svg><use href="assets/icons/light.svg"></use></svg>'
+
+  } else if(theme === "dark"){
+
+      htmlElement.setAttribute("data-theme", "light")
+    toggleTheme.innerHTML = '<svg><use href="assets/icons/dark.svg"></use></svg>'
   }
 })
 
